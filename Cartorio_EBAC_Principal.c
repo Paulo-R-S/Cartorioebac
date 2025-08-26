@@ -140,6 +140,7 @@ int main()
     	printf("\t1 -Registrar Nomes\n");
     	printf("\t2 -Consultar Nomes\n");
     	printf("\t3 -Deletar Nomes\n");
+    	printf("\t4 -Sair do sofwere \n");
     	printf("\n\n  OPÇÃO: ");//fIM DO MENU
  	
     	scanf("%d", &opcao);//armazenando escolha do usuario
@@ -159,6 +160,12 @@ int main()
 			case 3:
 			deletar();
 			break;
+			
+			case 4:
+			printf("\n\n obrigado por utilizar o SRNAF (Sistema de Registro de Nomes de Alunos e Funcionarios)\n\n");
+			return 0;
+			break;	
+		
 			
 			default:
 			printf("\n\n essa opção não esta disponivel!\n\n");
