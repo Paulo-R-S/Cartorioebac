@@ -128,50 +128,66 @@ int main()
 {
 	int opcao=0;//definindo variavel
 	int laco=1;
-	for(laco=1;laco=1;)
-	{
-		
-		  system("cls");
+	char senhadigitada []="a";
+	int comparacao;
 	
-    	  setlocale(LC_ALL,"Portuguese");//definindo linguagem
- 	
-        printf("### Cartório da EBAC ###\n\n");//inicio menu
-    	printf("Escolha a opção do menu:\n\n");
-    	printf("\t1 -Registrar Nomes\n");
-    	printf("\t2 -Consultar Nomes\n");
-    	printf("\t3 -Deletar Nomes\n");
-    	printf("\t4 -Sair do sofwere \n");
-    	printf("\n\n  OPÇÃO: ");//fIM DO MENU
- 	
-    	scanf("%d", &opcao);//armazenando escolha do usuario
+	printf("### Cartório da EBAC ###\n\n");
+	printf("Digite a sua senha de adminstrador!!\n\n Digite a sua senha:");
+	scanf("%s",senhadigitada);
 	
-    	system("cls");
-    	switch(opcao)//inicio da seleção
-    	{
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)//Se a senha for admin o sistema rodara
+	{	
+		system ("cls");
+		for(laco=1;laco=1;)
+		{
+		
+			  system("cls");
+	
+    		  setlocale(LC_ALL,"Portuguese");//definindo linguagem
+ 	
+      	 	printf("### Cartório da EBAC ###\n\n");//inicio menu
+    		printf("Escolha a opção do menu:\n\n");
+    		printf("\t1 -Registrar Nomes\n");
+    		printf("\t2 -Consultar Nomes\n");
+    		printf("\t3 -Deletar Nomes\n");
+    		printf("\t4 -Sair do sofwere \n");
+    		printf("\n\n  OPÇÃO: ");//fIM DO MENU
+ 	
+    		scanf("%d", &opcao);//armazenando escolha do usuario
+	
+    		system("cls");
+    		switch(opcao)//inicio da seleção
+    		{
     		
-    		case 1:
-    		registro();
-    		break;
+    			case 1:
+    			registro();
+    			break;
     		
-    		case 2:
-    		consulta();
-			break;
+    			case 2:
+    			consulta();
+				break;
 			
-			case 3:
-			deletar();
-			break;
+				case 3:
+				deletar();
+				break;
 			
-			case 4:
-			printf("\n\n obrigado por utilizar o SRNAF (Sistema de Registro de Nomes de Alunos e Funcionarios)\n\n");
-			return 0;
-			break;	
+				case 4:
+				printf("\n\n obrigado por utilizar o SRNAF (Sistema de Registro de Nomes de Alunos e Funcionarios)\n\n");
+				return 0;
+				break;	
 		
 			
-			default:
-			printf("\n\n essa opção não esta disponivel!\n\n");
-    		system("pause");
-			break;
+				default:
+				printf("\n\n essa opção não esta disponivel!\n\n");
+    			system("pause");
+				break;
 				
-         }
+       	 	 }
+		}
 	}
+	
+	else
+		printf("\nsenha incorreta!!\n");
 }
